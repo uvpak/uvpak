@@ -1,0 +1,67 @@
+# Uvicore Framework .gitignore
+
+# NOTES:
+# Folders should be denoted with a trailing /
+# /env/ denotes only the root level ./env folder be ignored
+# env/ denotes ANY env folder be ignored, even in ./some/deep/folder/env
+# Sames goes for files
+
+# OS Files
+.DS_Store
+._.DS_Store
+._.TemporaryItems
+.AppleDouble
+Thumbs.db
+.nfs*
+.swp
+
+# OS Folders
+#
+
+# IDE Files
+#
+
+# IDE Folders
+/.idea/
+/.vscode/
+
+# Python Files
+/.env
+/.coverage
+*.pyc
+*.py[cod]
+*.egg
+.Python
+/.installed.cfg
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Python Folders
+/instance/
+/venv/
+/env/
+/htmlcov/
+/html/
+/sdist/
+/dist/
+/build/
+*.egg-info/
+eggs/
+develop-eggs/
+__pycache__/
+.pytest_cache/
+
+# JavaScript Files
+npm-debug.log
+yarn-error.log
+
+# Javascript Folders
+/node_modules/
+
+# Other Files
+/:memory
+
+# Other Folders
+/.vagrant/

@@ -1,0 +1,24 @@
+# EditorConfig is awesome: http://EditorConfig.org
+# Crafted for the uvicore python framework
+
+# Top-most EditorConfig file
+root = true
+
+# Global settings
+[*]
+charset = utf-8
+indent_size = 4
+end_of_line = lf
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Ensure 2 space indent
+[*.{yaml,yml}]
+indent_size = 2
+indent_style = space
+
+# Ensure 4 tabs
+[*.{conf,cfg,ini}]
+indent_size = 4
+indent_style = tab

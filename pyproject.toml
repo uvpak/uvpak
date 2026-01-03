@@ -1,0 +1,50 @@
+[project]
+name = "uvpak"
+version = "0.1.0"
+description = "Unix Varient Package Manager"
+authors = [
+    {name = "Matthew Reschke",email = "mail@mreschke.com"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+
+
+[project.urls]
+# Project URLs
+homepage = "https://example.com"
+repository = "https://git.example.com"
+documentation = "https://docs.example.com"
+
+
+[tool.poetry]
+# Include this package itself
+packages = [
+    { include = "uvpak" },
+]
+# Additional included/excluded files in the final package build
+include = ["LICENSE"]
+
+
+[tool.poetry.dependencies]
+# Required dependencies
+# If you want code uvicore framework locally, use a path based develop dependency
+# uvicore = {path = "../framework", develop = true, extras = []}
+python = ">=3.10,<4.0"
+uvicore = {version = "0.3.*", extras = []}
+
+
+[tool.poetry.group.test.dependencies]
+# Testing dependencies (included by default)
+# Run: `poetry install --without test` to exclude them
+pytest = "8.3.*"
+pytest-cov = "6.0.*"
+pytest-asyncio = "0.25.*"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Uvicore</title>
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                /*background-color: #1975d2;*/
+                /*background-color: #1e2129;*/
+                background-color: #17182a;
+                /*color: #636b6f;*/
+                color: #ffffff;
+                font-family: sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+            a {
+                color: #683fb2;
+            }
+            .full-height {
+                height: 100vh;
+            }
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+            .position-ref {
+                position: relative;
+            }
+            .content {
+                text-align: center;
+            }
+            .title {
+                /*color: #1975d2;*/
+                color: #2da2cd;
+                font-size: 48px;
+                margin-bottom: 30px;
+            }
+            .powered {
+                color: #5845b1;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+            .logo img {
+                height: 300px;
+            }
+            .openapi {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            .docs {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="content">
+                <div class="logo">
+                    <img src="{{ asset('uvpak/images/uvicore.jpg') }}">
+                </div>
+                <div class="title">
+                    Welcome to {{app_name}} {{app_version}}
+                </div>
+                <div class="powered">
+                    Powered by Uvicore {{uvicore_version}}
+
+                </div>
+                <div class="openapi">
+                    <b>View your OpenAPI (Swagger) Auto Documentation at <a href="{{openapi_docs_url}}">{{openapi_docs_url}}</a></b>
+                </div>
+                <div class="docs">
+                    <b>View the Uvicore Documentation <a href="https://uvicore.io">https://uvicore.io</a></b>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
