@@ -29,12 +29,15 @@ packages = [
 include = ["LICENSE"]
 
 
+[tool.poetry.scripts]
+uvpak = "uvpak.commands.entrypoint:cli"
+
 [tool.poetry.dependencies]
 # Required dependencies
 # If you want code uvicore framework locally, use a path based develop dependency
-# uvicore = {path = "../framework", develop = true, extras = []}
+uvicore = {path = "../framework", develop = true, extras = []}
 python = ">=3.10,<4.0"
-uvicore = {version = "0.3.*", extras = []}
+#uvicore = {version = "0.3.*", extras = []}
 
 
 [tool.poetry.group.test.dependencies]

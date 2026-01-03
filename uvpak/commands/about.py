@@ -4,18 +4,26 @@ from uvicore.exceptions import SmartException
 from uvicore.console import command, argument, option
 
 
+# Get running app name and version
+app_name = uvicore.app.name
+app_version = uvicore.app.package(main=True).version
+
 @command()
 async def cli():
-    """Welcome to Uvicore"""
+    """Welcome to Uvpak!"""
     try:
 
-        print("""Welcome to a Uvicore Example CLI Command!
+        print(f"""Welcome to Uvpak v{app_version}, the Unix Variant Package Manager!
 
-This command lives in your commands/welcome.py file and is registered with the CLI
-in your package/provider.py boot() method.  Create as many CLI commands as needed
-and be sure to checkout the commands included with the uvicore packages.
+Uvpak is a modern package manager for all Unix-like operating systems, built with Python!
+A universal package manager for Linux, MacOS, BSD, WSL, Cygwin and more!
 
-~mReschke""")
+By default, Uvpak comes with NO pre installed package registries.  You must build and add
+your own package registries that contain the software that YOU want to distribute and
+install for your own systems and use cases.  This is YOUR package manager to distriute
+YOUR artifacts the way YOU want to!
+
+To get started, please refer to the Uvpak documentation at https://uvpak.mreschke.com""")
 
     except SmartException as e:
         # Python exit() with any value means "error" in bash exit code speak!

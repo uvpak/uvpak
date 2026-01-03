@@ -27,7 +27,7 @@ config = {
     # name: The human readable name of this package/app.  Like 'Matts Wiki'
     # main: The package provider to run when this app is served/executed
     # --------------------------------------------------------------------------
-    'name': env('APP_NAME', 'Uvpak App'),
+    'name': env('APP_NAME', 'Unix Variant Package Manager'),
     'debug': env.bool('DEBUG', False),
     'main': {
         'package': 'uvpak',

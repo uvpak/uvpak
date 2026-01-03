@@ -38,7 +38,7 @@ class Uvpak(Provider, Cli):
 
         # Define Provider Registrations
         self.registers(self.package.config.registers)
-        
+
         # Define view and asset paths and configure the templating system
         #self.register_views()
 
@@ -137,11 +137,15 @@ class Uvpak(Provider, Cli):
         #     },
         # })
 
+        # Get running app name and version
+        app_name = uvicore.app.name
+        app_version = uvicore.app.package(main=True).version
+
         # Or you can define commands as kwargs (multiple calls to self.commands() are appended)
         self.register_cli_commands(
             group='uvpak',
-            help='Uvpak Commands',
+            help=f'{app_name} v{app_version}',
             commands={
-                'welcome': 'uvpak.commands.welcome.cli',
+                'about': 'uvpak.commands.about.cli',
             },
         )
